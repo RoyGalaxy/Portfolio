@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <!-- <meta http-equiv="refresh" content="20" /> -->
+        <link rel="icon" href="./images/02n.png" />
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+        <title>Weather App</title>
+
+        <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+        <script>eruda.init();</script> -->
+    </head>
+    <body onload="getPosition()">
+        <section class="container">
+            <header>
+                <span class="nav-btn"></span>
+                <span class="app-title">Weather Forecast</span>
+            </header>
+            <div class="weather-container">
+                <div class="weather-date">
+                    <img class="icon" src="./images/01d.png" alt="weather icon" />
+                    <div class="date">
+                        <span>Today</span>
+                        <span class="today-date">Wed, June 30</span>
+                    </div>
+                </div>
+                <div class="temperature">
+                    <p>N.A</p>
+                </div>
+                <div class="location">
+                    <p>N.A</p>
+                </div>
+                <div class="description">
+                    <p>N.A</p>
+                </div>
+            </div>
+            <div class="days">
+                <div class="indicator"></div>
+                <span onclick="indicate(this)" class="today">Today</span>
+                <!-- <span onclick="indicate(this)">Tomorrow</span>
+                <span onclick="indicate(this)" style="color:#37b8ff;">Next 7 days ></span> -->
+            </div>
+            <div class="times"></div>
+        </section>
+        
+        <script src="./js/weather.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./js/app.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

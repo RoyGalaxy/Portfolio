@@ -1,0 +1,207 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    max-height: 900px;
+    background: #10103A;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    max-width: 450px;
+    height: 60px;
+    background: #10103A;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.app-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.nav-btn,.nav-btn:after{
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    border-radius: 1px;
+}
+.nav-btn:after{
+    content: '';
+    top: -4px;
+    width: 20px;
+}
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.temperature p{
+    font: 4rem 'Poppins';
+    color: #fff;
+}
+.unit{
+    display: inline-block;
+    height: 4rem;
+    color: #ccc;
+    vertical-align: text-top;
+    font: 3rem 'Poppins';
+}
+.weather-date{
+    display: flex;
+}
+.weather-date img{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    margin-right: 5px;
+}
+.weather-date .date{
+    position: relative;
+    top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.weather-date span:nth-child(1){
+    font: 1.6rem 'Poppins';
+    color: #fff;
+}
+.weather-date span:nth-child(2){
+    margin-left: 5px;
+    font: 0.8rem 'Poppins';
+    color: #dadada;
+}
+.location,.description{
+    display: flex;
+    align-items: flex-start;
+    height: 30px;
+}
+.location p,.description p{
+    color: #dadada;
+    font:1rem 'Poppins';
+}
+.times{
+    position: relative;
+    height: 160px;
+    width: 100vw;
+    overflow-x: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.box{
+    position: relative;
+    height: 140px;
+    min-width: 70px;
+    border-radius: 35px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    box-shadow:inset 0 0 5px rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 8px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+.box.active{
+    top: -15px;
+    background: white;
+    box-shadow: 0 10px 10px rgba(255,255,255,0.1);
+}
+.box .weather-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+}
+.box img{
+    position: absolute;
+    display: block;
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.box p{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: #fff;
+}
+.box.active p{
+    color: #111;
+    font-weight: bold;
+}
+.box p span{
+    font-size: 0.75rem;
+    color: #dadada;
+    vertical-align: text-top;
+}
+.box.active p span{
+    color: #777;
+}
+.days{
+    position: relative;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px 0 20px;
+    text-transform: capitalize;
+}
+.days span{
+    color: #fff;
+    font: 1rem 'Poppins';
+    font-weight: bold;
+}
+.days .indicator{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #fff;
+    transition:left 0.2s ease;
+    box-shadow: 0 0 5px rgba(255,255,255,0.1),
+                0 0 10px rgba(255,255,255,0.1);
+}

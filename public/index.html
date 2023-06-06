@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Abhijeet Roy | Website Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script> -->
+</head>
+
+<body>
+    <div class="loader hide"></div>
+    
+    <header>
+        <button class="jump-to-top hide"></button>
+        <h2 class="website-title">Abhijeet Roy</h2>
+        <button class="nav-open-btn" onclick="showNav()"></button>
+        <nav class="nav-bar" id="navBar">
+            <button class="nav-close-btn" onclick="hideNav()"></button>
+            <ul class="">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <!-- <li><a href="pages/about.html">About Me</a></li> -->
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="hide"></aside>
+    <aside class="hide"></aside>
+    <main class="">
+        <section class="my-info" id="info">
+            <h1 class="name">Hi, I'm Abhijeet Roy</h1>
+            <h1 class="info">I'm a <span class="job job-1"> freelancer</span><span class="job job-2">Web developer</span></h1>
+            <div class="social-links">
+                <span class="instagram"><a href="https://instagram.com/roy_galaxy.js"><i class="ri-instagram-line"></i></a></span>
+                <span class="whatsapp"><a href="https://wa.me/+918058523111"><i class="ri-whatsapp-line"></i></a></span>
+                <span class="phone"><a href="tel:+918824707969"><i class="ri-phone-line"></i></a></span>
+                <span class="phone"><a href="mailto:ajroysstyle@gmail.com"><i class="ri-mail-add-line"></i></a></span>
+            </div>
+            <button class="cta"><a href="#services">See Services</a></button>
+        </section>
+        <section class="my-services" id="services">
+            <h5 class="section-title">My Services</h5>
+            <h1 class="section-header">Services Provided For My Clients</h1>
+            <div class="indicator">
+                <span class="slider-indicator service-indicator active" onclick="scrollSlider(this,1)">1</span>
+                <span class="slider-indicator service-indicator" onclick="scrollSlider(this,2)">2</span>
+            </div>
+            <div class="swipe-slider" onscroll="handleSliderScroll(this)">
+                <div class="service-development">
+                    <img src="images/coding.png" alt="">
+                    <h3  class="service-title">Development</h3>
+                    <ul class="service-description">
+                        <li>HTML/CSS/REACT</li>
+                        <li>JavaScript</li>
+                        <li>Animation</li>
+                        <li>Node.js</li>
+                        <li>FULL STACK</li>
+                    </ul>
+                </div>
+                <div class="service-ui-design">
+                    <img src="images/app-development.png" alt="" srcset="">
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <ul class="service-description">
+                        <li>Landing Pages</li>
+                        <li>User Flow</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Mobile App Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="special-skills" id="specialSkills">
+            <h5 class="section-title">Special Skills</h5>
+            <h1 class="section-header">My Special Skills</h1>
+            <div class="skill-progress skill-communication">
+                <span class="progress" style="--percent: 0.75;"></span>
+                <h5>Communication</h5>
+                <span class="skill-level">75%</span>
+            </div>
+            <div class="skill-progress skill-leadership">
+                <span class="progress" style="--percent: 0.70;"></span>
+                <h5>Leadership</h5>
+                <span class="skill-level">70%</span>
+            </div>
+            <div class="skill-progress skill-teamwork">
+                <span class="progress" style="--percent: 0.90;"></span>
+                <h5>Teamwork</h5>
+                <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-progress skill-flexibility">
+                <span class="progress" style="--percent: 0.80;"></span>
+                <h5>Flexibility</h5>
+                <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-progress skill-patience">
+                <span class="progress" style="--percent: 0.92;"></span>
+                <h5>Patience</h5>
+                <span class="skill-level">92%</span>
+            </div>
+        </section>
+        <section class="portfolio" id="projects">
+            <h5 class="section-title">Awesome Portfolio</h5>
+            <h1 class="section-header">My Complete Projects</h1>
+            <div class="indicator">
+                <span class="slider-indicator portfolio-indicator active" onclick="scrollSlider(this,1)">1</span>
+                <span class="slider-indicator portfolio-indicator" onclick="scrollSlider(this,2)">2</span>
+                <span class="slider-indicator portfolio-indicator" onclick="scrollSlider(this,3)">3</span>
+            </div>
+            <div class="swipe-slider" onscroll="handleSliderScroll(this)">
+                <div class="portfolio-ecommerce" onclick="openProject(this.className)">
+                    <img src="./images/ecommerce-img.jpg" alt="">
+                    <h4 class="portfolio-project-title">RESTAURANT APP</h4>
+                    <p class="portfolio-project-description">Food delivery and in-restaurant menu services app built for Nimantrit foods, Dubai.</p>
+                </div>
+                <div class="portfolio-dashboard" onclick="openProject(this.className)">
+                    <img src="./images/dashboard-img.jpg" alt="">
+                    <h4 class="portfolio-project-title">Backend Dashboard</h4>
+                    <p class="portfolio-project-description">Has the server side controls and analytics for the RESTAURANT APP on the next slide</p>
+                </div>
+                <div class="portfolio-weather-app" onclick="openProject(this.className)">
+                    <img src="./images/weather-app-img.jpg" alt="">
+                    <h4 class="portfolio-project-title">WEATHER APP</h4>
+                    <p class="portfolio-project-description">Shows current Weather for your location also shows weather forcast for the whole day</p>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial">
+            <h5 class="section-title">Testimonial</h5>
+            <h1 class="section-header">Satisfied Clients Say</h1>
+            <div class="indicator">
+                <span class="slider-indicator testimonial-indicator active" onclick="scrollSlider(this,1)">1</span>
+                <span class="slider-indicator testimonial-indicator" onclick="scrollSlider(this,2)">2</span>
+            </div>
+            <div class="swipe-slider" onscroll="handleSliderScroll(this)">
+                <div class="service-ui-design"  style="background: var(--primary-light)">
+                    <span class="quotes l"><i class="ri-double-quotes-l"></i></span>
+                    <h3 class="service-title testimonial">Great seller, was patient and responsive every step of the way. Shared screenshots of progress and was receptive to adjustments</h3>
+                    <span class="quotes r"><i class="ri-double-quotes-r"></i></span>
+                </div>
+                <div class="service-development"  style="background: var(--primary-light)">
+                    <span class="quotes l"><i class="ri-double-quotes-l"></i></span>
+                    <h3  class="service-title testimonial">Thank You Abhijeet, you did the best work and in budget. It was really amazing working with you.</h3>
+                    <span class="quotes r"><i class="ri-double-quotes-r"></i><span>
+                </div>
+            </div>
+        </section>
+        <section class="favourite-clients">
+            <h5 class="section-title">favourite Clients</h5>
+            <h1 class="section-header">Worked With Trusted Clients</h1>
+            <div class="indicator">
+                <span class="slider-indicator clients-indicator active" onclick="scrollSlider(this,1)">1</span>
+                <span class="slider-indicator clients-indicator" onclick="scrollSlider(this,2)">2</span>
+                <span class="slider-indicator clients-indicator" onclick="scrollSlider(this,3)">3</span>
+            </div>
+            <div class="swipe-slider" onscroll="handleSliderScroll(this)">
+                <div>
+                    <h4 class="portfolio-project-title">Black Pepper</h4>
+                    <p class="portfolio-project-description">Made an online food-ordering app for their Dubai based restaurant</p>
+                </div>
+                <div>
+                    <h4 class="portfolio-project-title">Nanvi Tech</h4>
+                    <p class="portfolio-project-description">Made a customised business webiste for Nanvi tech servicing in many countries.</p>
+                </div>
+                <div>
+                    <h4 class="portfolio-project-title">FHFH</h4>
+                    <p class="portfolio-project-description">Made a ice-hockey analytic dashboard for a US based startup</p>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter" id="newsletter">
+            <h5 class="section-title">Get Latest Updates</h5>
+            <h1 class="section-header">Subscribe For Newsletter</h1>
+            <form action="#">
+                <input type="text" name="email" class="newsletter-email" placeholder="demo@example.com">
+                <button type="submit" class="newsletter-submit" >Subscribe Now</button>
+            </form>
+        </section>
+    </main>
+    <footer class="">
+        <h3 class="contact-phone" onclick="window.open('tel:8824707969','_self')"><span>Phone: </span>+91 8824707969</h3>
+        <h3 class="contact-email" onclick="window.open('mailto:ajroysstyle@gmail.com','_self')"><span>Email: </span> ajroysstyle@gmail.com</h3>
+        <div class="social-links">
+            <span class="instagram"><a href="https://instagram.com/roy_galaxy.js"><i class="ri-instagram-line"></i></a></span>
+            <span class="whatsapp"><a href="https://wa.me/+918058523111"><i class="ri-whatsapp-line"></i></a></span>
+            <!-- <span class="LinkedIn"></span> -->
+        </div>
+        <span class="attributes">
+            Attributes: <br>
+            <a href="https://www.flaticon.com/free-icons/app" title="app icons">App icons created by justicon - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/software-development" title="software-development icons">Software-development icons created by Freepik - Flaticon</a>
+        </span>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

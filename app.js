@@ -14,17 +14,18 @@ app.use(express.static("./public"))
 
 dotenv.config();
 
-mongoose
-    .connect(process.env.MONGO_URL)
-    .then(() => console.log("Connected to database"))
-    .catch(err => console.log(err))
-
 const newsletterRoute = require("./routes/newsletter.js")
 
 app.use(cors())
 app.use(express.json())
 app.use("/api/newsletter",newsletterRoute)
 
-app.listen(PORT,() => {
-    console.log("server started at port "+ PORT)
-})
+mongoose
+    .connect(process.env.MONGO_URL)
+    .then(() => {
+        console.log("Connected to database")
+        app.listen(PORT,() => {
+            console.log("server started at port "+ PORT)
+        })
+    })
+    .catch(err => console.log(err))

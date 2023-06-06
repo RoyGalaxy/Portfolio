@@ -179,7 +179,7 @@
         <section class="newsletter" id="newsletter">
             <h5 class="section-title">Get Latest Updates</h5>
             <h1 class="section-header">Subscribe For Newsletter</h1>
-            <form action="#">
+            <form action="/api/newsletter/" method="post" onsubmit="location.reload()">
                 <input type="text" name="email" class="newsletter-email" placeholder="demo@example.com">
                 <button type="submit" class="newsletter-submit" >Subscribe Now</button>
             </form>

@@ -14,11 +14,11 @@ app.use(express.static("./public"))
 
 dotenv.config();
 
-const newsletterRoute = require("./routes/newsletter.js")
+const contactRoute = require("./routes/contact.js")
 
 app.use(cors())
 app.use(express.json())
-app.use("/api/newsletter",newsletterRoute)
+app.use("/api/contact",contactRoute)
 
 mongoose
     .connect(process.env.MONGO_URL)

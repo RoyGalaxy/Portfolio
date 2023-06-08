@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>Abhijeet Roy | Website Developer</title>
+    <meta name="theme-color" content="#252734">
+    <link rel="icon" href="images/pwa-icons/roygalaxy_logo-512x512.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
     
     <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script> -->
@@ -26,9 +29,9 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
+                <!-- <li><a href="#newsletter">Newsletter</a></li> -->
                 <!-- <li><a href="pages/about.html">About Me</a></li> -->
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +47,7 @@
                 <span class="phone"><a href="tel:+918824707969"><i class="ri-phone-line"></i></a></span>
                 <span class="phone"><a href="mailto:ajroysstyle@gmail.com"><i class="ri-mail-add-line"></i></a></span>
             </div>
-            <button class="cta"><a href="#services">See Services</a></button>
+            <button class="cta"><a href="#contact" onclick="draftHireMessage()">Hire Me</a></button>
         </section>
         <section class="my-services" id="services">
             <h5 class="section-title">My Services</h5>
@@ -116,20 +119,23 @@
                 <span class="slider-indicator portfolio-indicator" onclick="scrollSlider(this,3)">3</span>
             </div>
             <div class="swipe-slider" onscroll="handleSliderScroll(this)">
-                <div class="portfolio-ecommerce" onclick="openProject(this.className)">
+                <div class="portfolio-ecommerce">
                     <img src="./images/ecommerce-img.jpg" alt="">
                     <h4 class="portfolio-project-title">RESTAURANT APP</h4>
                     <p class="portfolio-project-description">Food delivery and in-restaurant menu services app built for Nimantrit foods, Dubai.</p>
+                    <button class="cta"><a href="https://weak-jade-sea-urchin-ring.cyclic.app" >Launch <i class="ri-arrow-right-up-line"></i></a></button>
                 </div>
-                <div class="portfolio-dashboard" onclick="openProject(this.className)">
+                <div class="portfolio-dashboard">
                     <img src="./images/dashboard-img.jpg" alt="">
                     <h4 class="portfolio-project-title">Backend Dashboard</h4>
                     <p class="portfolio-project-description">Has the server side controls and analytics for the RESTAURANT APP on the next slide</p>
+                    <button class="cta"><a href="https://weak-jade-sea-urchin-ring.cyclic.app/dashboard/" >Launch <i class="ri-arrow-right-up-line"></i></a></button>
                 </div>
-                <div class="portfolio-weather-app" onclick="openProject(this.className)">
+                <div class="portfolio-weather-app">
                     <img src="./images/weather-app-img.jpg" alt="">
                     <h4 class="portfolio-project-title">WEATHER APP</h4>
                     <p class="portfolio-project-description">Shows current Weather for your location also shows weather forcast for the whole day</p>
+                    <button class="cta"><a href="/portfolio/Weather App/" >Launch <i class="ri-arrow-right-up-line"></i></a></button>
                 </div>
             </div>
         </section>
@@ -176,18 +182,19 @@
                 </div>
             </div>
         </section>
-        <section class="newsletter" id="newsletter">
-            <h5 class="section-title">Get Latest Updates</h5>
-            <h1 class="section-header">Subscribe For Newsletter</h1>
-            <form action="/api/newsletter/" method="post" onsubmit="location.reload()">
-                <input type="text" name="email" class="newsletter-email" placeholder="demo@example.com">
-                <button type="submit" class="newsletter-submit" >Subscribe Now</button>
+        <section class="contact" id="contact">
+            <h5 class="section-title">Stay in Contact</h5>
+            <h1 class="section-header">Contact Form</h1>
+            <form action="/api/contact/" method="post" >
+                <input type="email" name="email" class="contact-email" placeholder="demo@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <textarea name="message" class="contact-textarea" rows="5" placeholder="Type your message here" required></textarea>
+                <button type="submit" class="contact-submit" >Send Message</button>
             </form>
         </section>
     </main>
     <footer class="">
-        <h3 class="contact-phone" onclick="window.open('tel:8824707969','_self')"><span>Phone: </span>+91 8824707969</h3>
-        <h3 class="contact-email" onclick="window.open('mailto:ajroysstyle@gmail.com','_self')"><span>Email: </span> ajroysstyle@gmail.com</h3>
+        <h3 class="my-contact-phone" onclick="window.open('tel:8824707969','_self')"><span>Phone: </span>+91 8824707969</h3>
+        <h3 class="my-contact-email" onclick="window.open('mailto:ajroysstyle@gmail.com','_self')"><span>Email: </span> ajroysstyle@gmail.com</h3>
         <div class="social-links">
             <span class="instagram"><a href="https://instagram.com/roy_galaxy.js"><i class="ri-instagram-line"></i></a></span>
             <span class="whatsapp"><a href="https://wa.me/+918058523111"><i class="ri-whatsapp-line"></i></a></span>

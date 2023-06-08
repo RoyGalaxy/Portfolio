@@ -402,6 +402,9 @@ section:nth-child(even){ /* TODO change this to odd once top container is design
     object-fit: contain;
     width: auto;
 }
+.ri-arrow-right-up-line{
+    margin-left: 4px;
+}
 .testimonial{
     width: 100%;
     white-space: pre-wrap;
@@ -432,12 +435,12 @@ section:nth-child(even){ /* TODO change this to odd once top container is design
 
 
 /* Footer */
-.newsletter form{
+.contact form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.newsletter-email{
+.contact-email,.contact-textarea{
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -451,13 +454,17 @@ section:nth-child(even){ /* TODO change this to odd once top container is design
     box-shadow: 4px solid var(--text);
     transition: border 0.2s ease;
 }
-.newsletter-email:focus{
+.contact-textarea{
+    height: auto;
+    padding: 1rem 1.5rem;
+}
+.contact-email:focus,.contact-textarea:focus{
     border: 1px solid var(--text);
 }
-.newsletter-email::placeholder{
+.contact-email::placeholder,.contact-textarea::placeholder{
     color: var(--text-light);
 }
-.newsletter-submit{
+.contact-submit{
     display: flex;
     align-items: center;
     justify-content: center;

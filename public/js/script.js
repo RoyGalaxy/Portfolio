@@ -16,6 +16,12 @@ function scrollSlider(elm,i){
         behavior: "smooth"
     })
 }
+function draftHireMessage(){
+    const textarea = document.querySelector(".contact-textarea")
+    const emailInput = document.querySelector(".contact-email")
+
+    textarea.value = "Hey Abhijeet, we have a project for you. will share our vision to you via email so reply fast"
+}
 function handleSliderScroll(elm){
     let indicators = elm.previousElementSibling.children;
     let scrollDistance = elm.scrollLeft;
@@ -36,22 +42,6 @@ function handleSliderScroll(elm){
     }
 }
 
-function openProject(title){
-    let url = "/"
-    switch (title) {
-        case "portfolio-ecommerce":
-            url = "https://weak-jade-sea-urchin-ring.cyclic.app"
-            break;
-        case "portfolio-dashboard":
-            url = "https://weak-jade-sea-urchin-ring.cyclic.app/dashboard/"
-            break;
-        case "portfolio-weather-app"    :
-            url = "/portfolio/Weather App/"
-            break;
-    }
-    window.open(url,"_self")
-}
-
 function animateProgress(){
     const progressElms = document.querySelectorAll(".progress")
     const elmOffset = window.pageYOffset + progressElms[0].getBoundingClientRect().top
@@ -69,3 +59,14 @@ function animateProgress(){
 }
 
 window.addEventListener("scroll",animateProgress)
+
+// Register service worker
+// if("serviceWorker" in navigator){
+//     navigator.serviceWorker.register("/sworker.js")
+//       .then(() => {
+//         console.log("Service Worker Registered")
+//       })
+//       .catch(err => {
+//         console.log("error registering service worker", err)
+//       })
+// }
